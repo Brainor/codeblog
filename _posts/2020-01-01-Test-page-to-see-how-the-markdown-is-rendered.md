@@ -13,7 +13,7 @@ This is intended as a quick reference and showcase.
 - [[Links::#links]]
 - [[Images::#images]]
 - [[Code and Syntax Highlighting::#syntax]]
-- [[Math Expressions:#math]]
+- [[Math Expressions::#math]]
 - [[Tables::#tables]]
 - [[Blockquotes::#blockquotes]]
 - [[Inline HTML::#inline]]

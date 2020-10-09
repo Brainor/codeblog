@@ -24,7 +24,7 @@ content-type: eg
     {% for day in postsByDay %}
       <h3 id="{{ day.name }}">{{ day.name }}</h3>
           {% for post in day.items %}
-            <li id="date-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{ post.url }}">{{ post.title }}</a></li>
+            <li id="date-content" style="padding-bottom: 0.6em; list-style: none;"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
           {% endfor %}
     {% endfor %}
     
