@@ -3,6 +3,7 @@
     <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
 </a>
 
+网址在[这里](https://brainor.github.io/codeblog)
 # Simply Jekyll - A simple jekyll theme
 
 Simply Jekyll is a simple yet highly functional jekyll-based theme that combines the best of different worlds (atleast tries to 😅). It is a minimal and distraction free theme that strives to provide maximum value all without holding back on any essential features that a user would benefit from or would desire for. This is an evolving project and is garanteed to be maintained at least for quite some time as I myself am a beneficiary of this theme and the project.
