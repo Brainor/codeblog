@@ -55,7 +55,15 @@
         </div>
         <button class="scroll-to-top" id="scroll-to-top"><i class="fa fa-chevron-up"></i></button>
     </div>
+    {% if page.usemathjax %}
     <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+        });
+    </script>
+    {% endif %}
+
     <script>
         document.getElementById("scroll-to-top").addEventListener("click", function() {
             window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
