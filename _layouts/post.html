@@ -56,16 +56,20 @@
         <button class="scroll-to-top" id="scroll-to-top"><i class="fa fa-chevron-up"></i></button>
     </div>
     {% if page.usemathjax %}
-    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <!-- <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            TeX: {
-              equationNumbers: {
-                autoNumber: "AMS"
-              }
-            }
-          });
-    </script> -->
+    <!-- <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+    <script type="text/javascript">
+        window.MathJax = {
+          tex: {
+            packages: ['base', 'ams']
+          },
+          loader: {
+            load: ['ui/menu', '[tex]/ams']
+          }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
     {% endif %}
 
     <script>
