@@ -45,6 +45,11 @@ $ bundle
 
 Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
 
+## 参考
+
+[wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki)  
+[markdown示例](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_posts/2019-08-08-text-and-typography.md)
+
 ## License
 
 This work is published under [MIT][mit] License.
