@@ -48,7 +48,25 @@ Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#d
 ## 参考
 
 [wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki)  
-[markdown示例](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_posts/2019-08-08-text-and-typography.md)
+[markdown示例](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_posts/2019-08-08-text-and-typography.md)  
+版本:
+```powershell
+gem --version
+gem update --system
+ruby --version
+```
+搭建环境:
+```powershell
+bundle install
+gem install --http-proxy http://127.0.0.1:7890 bundler
+bundle update --bundler
+bundle update
+```
+
+本地运行:
+```powerhsell
+jekyll s
+```
 
 ## License
 

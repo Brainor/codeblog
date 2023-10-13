@@ -1,0 +1,11 @@
+---
+---
+
+@import 'main';
+
+/* append your custom style below */
+
+div.scroll > .highlight {
+    overflow-y: auto;
+    height: 400px;
+}
