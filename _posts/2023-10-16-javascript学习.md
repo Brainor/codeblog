@@ -46,3 +46,26 @@ console.log(foo); // 4.555806215962888
 ### [Promise](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 Promise对象用于表示一个异步操作的最终完成 (或失败), 及其结果值.  
 `Promise((resolve, reject)=>{...}).then(resolve, reject).catch(reject)`
+
+### [IIFE](https://developer.mozilla.org/zh-CN/docs/Glossary/IIFE)
+立即调用的函数表达式(Immediately Invoked Function Expression)是一个在定义时就会立即执行的  JavaScript 函数.  
+```javascript
+(function () {
+  statements
+})();
+```
+
+### [展开语法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+```javascript
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+// Expected output: 6
+
+console.log(sum.apply(null, numbers));
+// Expected output: 6
+```
