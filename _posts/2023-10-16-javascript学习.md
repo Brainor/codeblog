@@ -77,6 +77,22 @@ console.log(b.a); // 12
 Promise对象用于表示一个异步操作的最终完成 (或失败), 及其结果值.  
 `Promise((resolve, reject)=>{...}).then(resolve, reject).catch(reject)`
 
+[Promise构造函数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)  
+`new Promise(executor)`, `executor = (resolveFunc, rejectFunc)=>{...}`
+- `resolveFunc(value)`的参数可以为promise对象, 则`resolveFunc(value)`的状态(`fulfilled`, `rejected`)与该promise对象的状态相同.  
+- `executor`的返回值被忽略
+- `executor`中如果有error出现, 则promise对象`rejected`.
+- 当先调用`resolveFunc`, `value`被`resolved`. promise对象可以是pending(传入了thenable), 可以是fulfilled(传入了非thenable), 也可以是rejected(传入了invalid resolution value).
+- 当先调用`rejectFunc`, promise对象被rejected
+- 当promise settles后, 异步调用通过`then`, `catch`, `finally`关联的handlers, 将fulfillment value或rejection reason作为输入参数传给它们.
+
+[Promise.prototype.then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)
+`promise.then(onFulfilled, onRejected)`, `onFulfilled = (value)=>{...}`, `onRejected = (reason)=>{...}`
+立即返回一个promise对象, 当handler函数
+- 返回一个值/不返回值, promise对象fulfilled, value=value/`undefined`
+- 出错, promise对象rejected, reason=error
+- 返回一个promise对象, promise对象的状态与返回的promise对象的状态相同, value/reason与返回的promise对象的value/reason相同
+
 ### [IIFE](https://developer.mozilla.org/zh-CN/docs/Glossary/IIFE)
 立即调用的函数表达式(Immediately Invoked Function Expression)是一个在定义时就会立即执行的  JavaScript 函数.  
 ```javascript
