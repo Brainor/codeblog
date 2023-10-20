@@ -93,6 +93,9 @@ Promise 对象用于表示一个异步操作的最终完成 (或失败), 及其�
 - 出错, promise 对象 rejected, reason=error
 - 返回一个 promise 对象, promise 对象的状态与返回的 promise 对象的状态相同, value/reason 与返回的 promise 对象的 value/reason 相同
 
+#### [async](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 和 [await](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/await)
+await 返回从 `Promise` 实例或 thenable 对象取得的处理结果, 它只能在 async 函数或者模块顶层中使用。
+
 ### [IIFE](https://developer.mozilla.org/zh-CN/docs/Glossary/IIFE)
 立即调用的函数表达式(Immediately Invoked Function Expression)是一个在定义时就会立即执行的 JavaScript 函数.  
 ```javascript
@@ -156,6 +159,9 @@ console.log(adventurer.someNonExistentMethod?.()); // undefined
     ```
 3. [node.js](https://nodejs.org/api/modules.html)  
 webpack 运行在 Node.js 环境中
+
+## [Vue.js](https://cn.vuejs.org/guide/introduction.html)
+用于构建用户界面的 JavaScript 渐进式框架
 
 ## Chrome插件
 1. [Chrome API reference](https://developer.chrome.com/docs/extensions/reference/), [Extension development overview](https://developer.chrome.com/docs/extensions/mv3/devguide/)
