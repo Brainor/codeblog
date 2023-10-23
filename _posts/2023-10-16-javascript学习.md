@@ -162,6 +162,35 @@ webpack 运行在 Node.js 环境中
 
 ## [Vue.js](https://cn.vuejs.org/guide/introduction.html)
 用于构建用户界面的 JavaScript 渐进式框架
+```html
+<div id="app">
+  <button @click="count++">{{ count }}</button>
+  <div v-bind="objectOfAttrs"></div>
+  <button @click="increment">{{ count_2 }}</button>
+</div>
+```
+```javascript
+import { ref, createApp } from 'vue'
+const count_2 = ref(0)
+function increment() {
+  count_2.value++
+} 
+const app = createApp({
+  data() {
+    return {
+      count: 0,
+      count_2,
+      increment,
+      objectOfAttrs : {
+        id: 'container',
+        class: 'wrapper'
+      }
+    }
+  }
+})
+app.mount('#app')
+```
+https://cn.vuejs.org/guide/essentials/watchers.html
 
 ## Chrome插件
 1. [Chrome API reference](https://developer.chrome.com/docs/extensions/reference/), [Extension development overview](https://developer.chrome.com/docs/extensions/mv3/devguide/)
