@@ -190,7 +190,7 @@ const app = createApp({
 })
 app.mount('#app')
 ```
-https://cn.vuejs.org/guide/essentials/watchers.html
+https://cn.vuejs.org/guide/essentials/template-refs.html#function-refs
 
 ## Chrome插件
 1. [Chrome API reference](https://developer.chrome.com/docs/extensions/reference/), [Extension development overview](https://developer.chrome.com/docs/extensions/mv3/devguide/)
