@@ -140,6 +140,17 @@ console.log(adventurer?.["dog"]); //undefined
 console.log(adventurer.someNonExistentMethod?.()); // undefined
 ```
 
+### [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
+当DOM中的元素发生改变时会执行函数
+```javascript
+const observer = new MutationObserver(function(mutations, observer) {
+  mutations.forEach(function(mutation) {
+    console.log(mutation.type);
+  });
+  observer.disconnect();
+});
+```
+
 ## 网页搭建
 1. [npm](https://docs.npmjs.com/cli/v10/commands/npm-install)
     ```bash
@@ -190,7 +201,6 @@ const app = createApp({
 })
 app.mount('#app')
 ```
-https://cn.vuejs.org/guide/essentials/template-refs.html#function-refs
 
 ## Chrome插件
 1. [Chrome API reference](https://developer.chrome.com/docs/extensions/reference/), [Extension development overview](https://developer.chrome.com/docs/extensions/mv3/devguide/)
