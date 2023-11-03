@@ -206,4 +206,5 @@ app.mount('#app')
 1. [Chrome API reference](https://developer.chrome.com/docs/extensions/reference/), [Extension development overview](https://developer.chrome.com/docs/extensions/mv3/devguide/)
 2. [Edge extensions](https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/)
 3. [Chrome extensions 入门](https://developer.chrome.com/docs/extensions/mv3/getstarted/)
-4. 搜狗浏览器插件路径: `%AppData%\SogouExplorer\Extension`{: .filepath}, Edge 插件路径: `%LocalAppData%\Microsoft\Edge\User Data\Default\Extensions`{: .filepath}
+4. [Manifest V2](https://developer.chrome.com/docs/extensions/mv2/manifest/)
+5. 搜狗浏览器插件路径: `%AppData%\SogouExplorer\Extension`{: .filepath}, Edge 插件路径: `%LocalAppData%\Microsoft\Edge\User Data\Default\Extensions`{: .filepath}
