@@ -174,37 +174,47 @@ webpack 运行在 Node.js 环境中
 ## [Vue.js](https://cn.vuejs.org/guide/introduction.html)
 用于构建用户界面的 JavaScript 渐进式框架
 ```html
+<script type="importmap">
+    {
+      "imports": { "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js" }
+    }
+</script>
 <div id="app">
-  <button @click="count++">{{ count }}</button>
-  <div v-bind="objectOfAttrs"></div>
-  <button @click="increment">{{ count_2 }}</button>
+    <button @click="count++">{{ count }}</button>
+    <div v-bind="objectOfAttrs"></div>
+    <button @click="increment">{{ count_2 }}</button>
 </div>
+<div id="app2">{{ message }}</div>
+<script type="module" src="app.js"></script>
+<script type="module">
+    import { createApp, ref } from 'vue'
+    createApp({
+        setup() {
+            const message = ref('Hello Vue!')
+            return { message }
+        }
+    }).mount('#app2')
+</script>
 ```
 ```javascript
 import { ref, createApp } from 'vue'
 const count_2 = ref(0)
-function increment() {
-  count_2.value++
-} 
+function increment() { count_2.value++; }
 const app = createApp({
-  data() {
-    return {
-      count: 0,
-      count_2,
-      increment,
-      objectOfAttrs : {
-        id: 'container',
-        class: 'wrapper'
-      }
+    data() {
+        return {
+            count: 0, count_2, increment,
+            objectOfAttrs: { id: 'container', class: 'wrapper' }
+        }
     }
-  }
 })
 app.mount('#app')
 ```
+{: file='app.js'}
 
 ## Chrome插件
 1. [Chrome API reference](https://developer.chrome.com/docs/extensions/reference/), [Extension development overview](https://developer.chrome.com/docs/extensions/mv3/devguide/)
 2. [Edge extensions](https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/)
-3. [Chrome extensions 入门](https://developer.chrome.com/docs/extensions/mv3/getstarted/)
+3. [Chrome extensions 入门](https://developer.chrome.com/docs/extensions/mv3/getstarted/), [chrome插件开发攻略](http://blog.haoji.me/chrome-plugin-develop.html)
 4. [Manifest V2](https://developer.chrome.com/docs/extensions/mv2/manifest/)
 5. 搜狗浏览器插件路径: `%AppData%\SogouExplorer\Extension`{: .filepath}, Edge 插件路径: `%LocalAppData%\Microsoft\Edge\User Data\Default\Extensions`{: .filepath}
