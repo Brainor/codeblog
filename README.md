@@ -65,7 +65,23 @@ bundle update
 
 本地运行:
 ```powerhsell
+bundle show jekyll-theme-chirpy  # 查看gem包位置
 jekyll s
+```
+
+### Inline Attribute Lists
+[参考](https://kramdown.gettalong.org/syntax.html#inline-attribute-lists)
+
+```markdown
+A simple paragraph with an ID attribute.
+{: #para-one}
+
+> A blockquote with a title
+{:title="The blockquote title"}
+{: #myid}
+
+{:.ruby}
+    Some code here
 ```
 
 ## License
