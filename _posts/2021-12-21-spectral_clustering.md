@@ -3,6 +3,7 @@ title: 谱聚类
 tags: 算法
 math: true
 categories: 机器学习 算法
+author: 刘建平Pinard
 ---
 
 来源: [刘建平Pinard](https://www.cnblogs.com/pinard/p/6221564.html)
