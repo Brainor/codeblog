@@ -4,8 +4,9 @@
 @import 'main';
 
 /* append your custom style below */
+$max-lines: 15; // max lines of code to be scrolled
 
-div.scroll > .highlight {
+.highlight {
     overflow-y: auto;
-    height: 400px;
+    max-height: $max-lines * 1em;
 }
