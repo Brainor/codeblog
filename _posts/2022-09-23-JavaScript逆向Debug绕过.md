@@ -1,6 +1,7 @@
 ---
-tag: javascript 破解
+tag: javascript hack
 img_path: /assets/files/
+categories: coding
 ---
 源地址: [进击的Coder](https://mp.weixin.qq.com/s/e5vyAQbVyBONBimsHPvaaw)
 

@@ -1,6 +1,7 @@
 ---
-tags: 语言
+tags: powershell windows
 date: 2023-09-20 13:43:00 +8000
+categories: 软件使用
 ---
 ## 参考
 - [PowerShell语言规范](https://learn.microsoft.com/en-us/powershell/scripting/lang-spec/chapter-01), 内容可能过期

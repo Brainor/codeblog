@@ -1,6 +1,7 @@
 ---
 title: 可视化学习
-tags: 仓库 代码
+tags: 仓库 可视化
+categories: coding
 ---
 ## repository
 1. d3/[d3](https://github.com/d3/d3)  

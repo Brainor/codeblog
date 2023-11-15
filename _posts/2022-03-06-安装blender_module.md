@@ -1,6 +1,7 @@
 ---
 title: 安装Blender module
-tags: python
+tags: python blender
+categories: 软件使用
 ---
 [参考](https://playgrd.medium.com/data-analytics-in-blender-pandas-and-quandl-in-blender-d3c816237921)
 1. 确定Blender使用的python版本
