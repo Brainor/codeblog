@@ -1,7 +1,7 @@
 ---
 title: javascript 学习
 tags: javascript
-date: 2023-10-16 12:41:00 +8000
+date: 2023-10-16 12:41:00 +0800
 categories: coding
 ---
 

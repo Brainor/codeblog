@@ -1,7 +1,7 @@
 ---
 title: powershell 学习
 tags: powershell windows
-date: 2023-09-20 13:43:00 +8000
+date: 2023-09-20 13:43:00 +0800
 categories: 软件使用
 ---
 ## 参考
