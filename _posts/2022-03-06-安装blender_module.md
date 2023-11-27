@@ -1,5 +1,5 @@
 ---
-title: 安装Blender module
+title: 安装 Blender module
 tags: python blender
 categories: 软件使用
 ---

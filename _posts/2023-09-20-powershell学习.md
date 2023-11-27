@@ -1,4 +1,5 @@
 ---
+title: powershell 学习
 tags: powershell windows
 date: 2023-09-20 13:43:00 +8000
 categories: 软件使用

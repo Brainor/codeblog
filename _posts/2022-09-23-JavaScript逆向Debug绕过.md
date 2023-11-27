@@ -1,4 +1,5 @@
 ---
+title: JavaScript 逆向 Debug 绕过
 tag: javascript hack
 img_path: /assets/files/
 categories: coding
