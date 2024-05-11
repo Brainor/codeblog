@@ -83,6 +83,10 @@ A simple paragraph with an ID attribute.
 {:.ruby}
     Some code here
 ```
+## Contributing
+
+The contents of this repository are automatically updated when new releases are made to the [main repository][chirpy].  
+If you have problems using it, or would like to participate in improving it, please go to the main repository for feedback!
 
 ## License
 
