@@ -1,11 +1,12 @@
 ---
 title: JavaScript 逆向 Debug 绕过
 tag: javascript hack
-img_path: /assets/files/
+media_subpath: /assets/files/
 categories: coding
 author: 崔庆才
 ---
-源地址: [进击的Coder](https://mp.weixin.qq.com/s/e5vyAQbVyBONBimsHPvaaw)
+
+源地址: [进击的 Coder](https://mp.weixin.qq.com/s/e5vyAQbVyBONBimsHPvaaw)
 
 在做爬虫的时候，我们经常会在代码里面遇见 `debugger` 这么一个关键字。`debugger` 是 JavaScript 中定义的一个专门用于断点调试的关键字，只要遇到它，JavaScript 的执行便会在此处中断，进入调试模式。
 
@@ -16,6 +17,7 @@ author: 崔庆才
 本节我们就来介绍一个案例，来绕过无限 Debug。
 
 ## 1. 案例介绍
+
 我们先看一个案例，网址是：[https://antispider8.scrape.center/](https://antispider8.scrape.center/) ，打开这个网站，正常操作和之前的网站没有什么不同。但是，一旦我们打开开发者工具，就发现它立即进入了断点模式，如图所示。
 
 <figure>
@@ -37,6 +39,7 @@ author: 崔庆才
 办法当然是有的，本节我们就来总结一下无限 Debugger 的应对方案。
 
 ## 2. 实现原理
+
 我们首先要做的是找到无限 Debugger 的源头。在 Sources 面板中可以看到，`debugger` 关键字出现在了一个 JavaScript 文件里，这时候点击左下角的格式化按钮，如图所示。
 
 <figure>
@@ -56,6 +59,7 @@ author: 崔庆才
 了解了原理，下面我们就对症下药吧！
 
 ## 3. 禁用断点
+
 因为 `debugger` 其实就是对应的一个断点，它相当于用代码显式地声明了一个断点，要解除它，我们只需要禁用这个断点就好了。
 
 首先，我们可以禁用所有的断点。全局禁用开关位于 Sources 面板的右上角，叫作 Deactivate breakpoints，如图所示。
@@ -126,17 +130,20 @@ author: 崔庆才
 设定为 false，其效果就和选择了 Never pause here 是一样的，重新点击 Resume 也不会进入无限 Debbugger 循环了。
 
 ## 4. 替换文件
+
 前文我们介绍过 Overrides 面板的用法，利用它我们可以将远程的 JavaScript 文件替换成本地的 JavaScript 文件，这里我们依然可以使用这个方法来对文件进行替换，替换成什么呢？
 
 很简单，我们只需要在新的文件里面把 `debugger` 这个关键字删除。
 
 我们将当前的 JavaScript 文件复制到文本编辑器中，删除或者直接注释掉 `debugger` 这个关键字，修改如下：
+
 ```js
-setInterval((function() {
- // debugger; // 可以直接删除此行或者注释此行
- console.log("debugger")
-}), 1000)
+setInterval(function () {
+  // debugger; // 可以直接删除此行或者注释此行
+  console.log("debugger");
+}, 1000);
 ```
+
 打开 Sources 面板下的 Overrides 面板，将修改后的完整 JavaScript 文件复制进去，修改的内容如图所示：
 
 <figure>
@@ -149,6 +156,7 @@ setInterval((function() {
 另外我们还可以使用 Charles、Fiddler 等抓包工具进行替换，也可以使用浏览器插件 ReRes 等进行替换，也可以使用 Playwright 等工具使用 Request Interception 进行替换，达成的效果是一致的，原理都是将在线加载的 JavaScript 文件进行替换，最终消除无限 Debugger。
 
 ## 5. 总结
+
 本节讲解了无限 Debugger 的绕过方案，包括禁用全局断点、条件断点、替换原始文件等，从这些操作中我们也可以学习到一些 JavaScript 逆向的基本思路，建议好好掌握本内容。
 
-本文章来源于《Python3网络爬虫开发实战（第二版）》
+本文章来源于《Python3 网络爬虫开发实战（第二版）》
